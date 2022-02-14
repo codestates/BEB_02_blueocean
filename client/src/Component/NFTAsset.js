@@ -30,7 +30,7 @@ function Asset() {
                 </section>
             </div>
             <div id="right"  className="grow text-left mx-5 ">
-                <div id="price_info" className="font-ser">프라이스정보</div>
+                <div id="price_info" className="font-ser"></div>
                     <p className="text-blue-300 font-bold">Author</p>
                     <p className="my-5 font-bold text-5xl">Title</p>
                     <p className="text-gray-400">Owner</p>
@@ -39,18 +39,20 @@ function Asset() {
                         <div className="m-5 ">
                              <p>Current price</p>
                              <p className="text-bold text-3xl"><FaEthereum className="inline mr-2"/> 0.13</p>
-                            <button className="border rounded-lg w-40 h-12 font-bold text-center text-white mt-5 mr-5 bg-blue-500" >
-                              <MdOutlineAccountBalanceWallet className="inline mr-2"/>
-                              Buy  Now</button>
+                         </div>
+                         <div className="m-3">
+                            <button className="border rounded-lg w-40 h-12 font-bold text-center text-white bg-blue-500">
+                              <MdOutlineAccountBalanceWallet className="inline"/>
+                             Buy  Now
+                              </button>
                            <button className="border rounded-lg w-40 h-12 font-bold text-center text-blue-500 mt-5 border-blue-500">
                              <MdLocalOffer className="inline mr-2"/>
                               Make offer
                            </button>
-                    </div>
+                           </div>
                 </div>
                 <div id="transaction"></div>
             </div>
-
         </div>
     </div>
     )

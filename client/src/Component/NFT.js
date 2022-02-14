@@ -15,6 +15,9 @@ function NFT({onClickHeart,itemInfo}) {
 데이터를 10개묶음식 어떻게 받아올 것인가?
 */
 
+/*  Link to 로 parameter전달
+<Link to ="/asset/owner:id">
+*/
 const detailInfo = (e) => {
     console.log(typeof itemInfo)
 }
