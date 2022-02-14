@@ -32,7 +32,7 @@ function Navigation({fixed}) {
           <div className="w-full relative justify-between 
           lg:w-auto lg:static lg:block lg:justify-start
           xl:w-auto xl:static xl:block xl:justify-start">
-            <Link to="Home"
+            <Link to="/"
               className="text-sm font-bold flex leading-relaxed ml-3 mr-4 py-2 whitespace-nowrap uppercase "
             >
           <img src="https://opensea.io/static/images/logos/opensea.svg" className="mr-3 h-10"/>
@@ -47,11 +47,11 @@ function Navigation({fixed}) {
             </button>
           </div>
         <div>
-     <div class="pt-2 relative mx-40 text-gray-600">
-     <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+     <div className="pt-2 relative mx-40 text-gray-600">
+     <button type="submit" className="absolute right-0 top-0 mt-5 mr-4">
          <MdSearch />
      </button>
-        <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-24 ml-5 rounded-lg text-sm focus:outline-none"
+        <input className="border-2 border-gray-300 bg-white h-10 px-5 pr-24 ml-5 rounded-lg text-sm focus:outline-none"
           type="search" name="search" placeholder="Search items" />
        
       </div>
@@ -95,7 +95,7 @@ function Navigation({fixed}) {
                   href="#pablo"
                 >
                  
-                 <MdOutlineAccountCircle claassName=" text-lg leading-lg text-white" size='24' />
+                 <MdOutlineAccountCircle className=" text-lg leading-lg text-white" size='24' />
                 </a>
               </li>
               <li className="nav-item">
@@ -103,7 +103,7 @@ function Navigation({fixed}) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-500 hover:opacity-75"
                   href="#pablo"
                 >
-                 <MdOutlineAccountBalanceWallet claassName=" text-lg leading-lg text-white" size='24' />
+                 <MdOutlineAccountBalanceWallet className=" text-lg leading-lg text-white" size='24' />
                 </a>
               </li>
             </ul>
