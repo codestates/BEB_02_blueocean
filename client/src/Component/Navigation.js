@@ -1,7 +1,7 @@
-import Explore from '../Pages/Explore';
-import {Route, Routes, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {useState} from "react";
-import {MdOutlineAccountBalanceWallet, MdSearch, MdOutlineAccountCircle} from "react-icons/md"
+import {MdOutlineAccountBalanceWallet, MdSearch,  MdOutlineAccountCircle} from "react-icons/md"
+
 //<MdOutlineAccountBalanceWallet /> 컴포넌트처럼 사용
 
 /* 테일윈드 문법
@@ -25,6 +25,7 @@ hover:border-y-2 위아래 보더
 function Navigation({fixed}) {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [isLogined, setIslogined] = useState(false);
+
         return (
           <>
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3 border-b-2">
@@ -65,7 +66,7 @@ function Navigation({fixed}) {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             <li className="nav-item">
-                <Link to="/collection"
+                <Link to="/assets"
                   data-dropdown-toggle="dropdownNavbar"
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
                 >
@@ -82,12 +83,11 @@ function Navigation({fixed}) {
                 </a>
               </li>
               <li className="nav-item">
-                <a
+                <Link to='/create'
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-                  href="#pablo"
                 >
                  <span className="ml-2 hover:text-gray-600 hover:bg-gray-50">Create</span>
-                </a>
+                </Link>
               </li>
                <li className="nav-item">
                 <a
@@ -95,7 +95,7 @@ function Navigation({fixed}) {
                   href="#pablo"
                 >
                  
-                 <MdOutlineAccountCircle className=" text-lg leading-lg text-white" size='24' />
+                 <MdOutlineAccountCircle className=" text-lg leading-lg " size='24'/>
                 </a>
               </li>
               <li className="nav-item">
@@ -103,7 +103,7 @@ function Navigation({fixed}) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-500 hover:opacity-75"
                   href="#pablo"
                 >
-                 <MdOutlineAccountBalanceWallet className=" text-lg leading-lg text-white" size='24' />
+                 <MdOutlineAccountBalanceWallet className=" text-lg leading-lg" size='24' />
                 </a>
               </li>
             </ul>

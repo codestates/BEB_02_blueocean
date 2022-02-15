@@ -21,11 +21,9 @@ function Explore() {
     const [heartCount, setHeartCount] = useState(0);
    
 
-    
-
     useEffect(async() => {
         await axios
-        .get('http://localhost:4000/collection')
+        .get('http://localhost:4000/assets')
         .then((res) => setItemInfo(res.data));
     }, []);
 
@@ -34,18 +32,26 @@ function Explore() {
         setHeartCount(count);
     }
 
+ 
+
+    
     return(
         <div className=" m-20  grid
          sm:grid-cols-1 
          md:grid-cols-2 
          lg:grid-cols-3 
          xl:grid-cols-4
-         2xl:grid-cols-5 gap-5 " >
-            <NFT itemInfo={itemInfo} onClickHeart={onClickHeart}/>
-           
-        
-      
+         2xl:grid-cols-5 gap-5" >
+             <ul>
+             {itemInfo.map((nft) => (
+                <li key={nft.id} >
+                    <NFT nftInfo={nft} />
+                </li>
 
+             )
+             )}                
+             </ul>
+       
         </div>
     )
 
