@@ -1,12 +1,10 @@
 const NFT = require('../models/nftSchema')
-// const Web3 = require('web3');	
-// const web3 = new Web3(process.env.networkHost);
 
 module.exports = {
-    post : (req,res) => {
-        const {img,title,externalLink,description,price,author,owner} = req.body;
-        
+    post : async (req,res) => {
+        const {img,title,externalLink,description,price,author,owner,tokenId} = req.body;
         const nft = new NFT({
+            tokenId,
             img,
             title,
             externalLink,

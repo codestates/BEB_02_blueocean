@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    id: Number,
-    profileImg: imageSchema,
+    id: String,
+    name: String,
+    // profileImg: imageSchema,
     about: String
 
 })
-module.exports = mongoose.model('blueocean', userSchema);
+module.exports = mongoose.model('USER', userSchema);
 
