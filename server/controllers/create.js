@@ -1,6 +1,8 @@
 const NFT = require('../models/nftSchema')
 
 module.exports = {
+  
+
     post : async (req,res) => {
         const {img,title,externalLink,description,price,author,owner,tokenId} = req.body;
         const nft = new NFT({

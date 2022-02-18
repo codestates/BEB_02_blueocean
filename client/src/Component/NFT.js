@@ -3,18 +3,8 @@ import { FaEthereum, FaRegHeart } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 
 function NFT({onClickHeart, nftInfo}) {
-   
-   
-/*
- <Link to ={{
-                pathname:`/asset/${nftInfo.id}`,
-                state: {
-                    nft,
-                }
-            }}>
-             </Link>
-            
-            */
+
+
     return(
         <div className="Item_wrap flex flex-col justify-center border-2 border-gray rounded-lg overflow-hidden">
          <Link to={{
@@ -28,7 +18,7 @@ function NFT({onClickHeart, nftInfo}) {
             <div className="item_info_wrap flex justify-between w-full max-w-md w-full mx-auto bg-white shadow-md rounded-md px-4  my-1" >
                 <div className="item_info text-left">
                     <p>{nftInfo.author}</p>
-                    <p className="font-bold">{nftInfo.name}</p>
+                    <p className="font-bold">{nftInfo.title}</p>
                 </div>
                 <div className="price_info text-right" >
                     <p>price</p>

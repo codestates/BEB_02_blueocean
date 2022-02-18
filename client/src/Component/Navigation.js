@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {useState} from "react";
 import {MdOutlineAccountBalanceWallet, MdSearch,  MdOutlineAccountCircle} from "react-icons/md"
-
+import axios from 'axios';
 //<MdOutlineAccountBalanceWallet /> 컴포넌트처럼 사용
 
 /* 테일윈드 문법
@@ -22,9 +22,26 @@ hover:border-y-2 위아래 보더
 
 
 */
-function Navigation({fixed}) {
+function Navigation({walletHandler, account}) {
     const [navbarOpen, setNavbarOpen] = useState(false);
-    const [isLogined, setIslogined] = useState(false);
+
+    const updateProfile = async () => {
+      if(account) {
+        await axios.post("http://localhost:4000/user", {
+          account,
+          name: "IMZ",
+          about: "NoNe",
+          CA: null,
+        })
+        .then((res)=> {
+          console.log("완료")
+        })
+        .catch((err) => {
+          console.log(err);
+        } )
+    }
+  }
+
 
         return (
           <>
@@ -95,7 +112,7 @@ function Navigation({fixed}) {
                   href="#pablo"
                 >
                  
-                 <MdOutlineAccountCircle className=" text-lg leading-lg " size='24'/>
+                 <MdOutlineAccountCircle onClick={updateProfile} className=" text-lg leading-lg " size='24'/>
                 </a>
               </li>
               <li className="nav-item">
@@ -103,7 +120,7 @@ function Navigation({fixed}) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-500 hover:opacity-75"
                   href="#pablo"
                 >
-                 <MdOutlineAccountBalanceWallet className=" text-lg leading-lg" size='24' />
+                 <MdOutlineAccountBalanceWallet onClick={walletHandler} className=" text-lg leading-lg" size='24' />
                 </a>
               </li>
             </ul>

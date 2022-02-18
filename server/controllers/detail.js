@@ -13,7 +13,7 @@ module.exports = {
       
        data.author = userInfo.name;
        data.about = userInfo.about
-       data.owner = ownerInfo.name
+       data.nickname = ownerInfo.name
 
         res.status(200).json(data);
     }

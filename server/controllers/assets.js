@@ -10,7 +10,7 @@ module.exports = {
             $lookup: {
                 from: "users",
                 localField: "author",
-                foreignField: "id",
+                foreignField: "account",
                 as: "authorInfo",
             },
         }])
